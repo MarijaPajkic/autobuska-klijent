@@ -1,0 +1,19 @@
+.icon-link {
+    text-decoration: none;
+    color: black;
+    opacity: 1.0;
+}
+
+.icon-link:hover {
+    text-decoration: none;
+    color: black;
+    opacity: 0.5;
+}
+
+.content-nav {
+    margin: 0; 
+    position: absolute; 
+    margin-top: 30px; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+}
