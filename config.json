@@ -3,12 +3,365 @@
   "description": "Klijentska web aplikacija za diplomski rad.",
   "entities": [
     {
+      "urlName": "dnevnasmena",
+      "nameSing": "Dnevna smena",
+      "namePlu": "Dnevne smene",
+      "attributes": [
+        {
+          "name": "dnevnasmenaId",
+          "displayName": "ID dnevne smene",
+          "type": "number"
+        },
+        {
+          "name": "datumdnevnesmene",
+          "displayName": "Datum dnevne smene",
+          "type": "date"
+        },
+        {
+          "name": "zaposlenId",
+          "displayName": "Zaposlen",
+          "type": {
+            "zaposlenId": "number",
+            "ime": "text",
+            "prezime": "text"
+          }
+        },
+        {
+          "name": "smenaId",
+          "displayName": "Smena",
+          "type": {
+            "smenaId": "number",
+            "nazivsmene": "text"
+          }
+        }
+      ]
+    },
+    {
+      "urlName": "karta",
+      "nameSing": "Karta",
+      "namePlu": "Karte",
+      "attributes": [
+        {
+          "name": "kartaId",
+          "displayName": "ID karte",
+          "type": "number"
+        },
+        {
+          "name": "prevoznik",
+          "displayName": "Prevoznik",
+          "type": "text"
+        },
+        {
+          "name": "relacija",
+          "displayName": "Relacija",
+          "type": "text"
+        },
+        {
+          "name": "datumpolaska",
+          "displayName": "Datum polaska",
+          "type": "date"
+        },
+        {
+          "name": "vremepolaska",
+          "displayName": "Vreme polaska",
+          "type": "date"
+        },
+        {
+          "name": "brojsedista",
+          "displayName": "Broj sedišta",
+          "type": "number"
+        },
+        {
+          "name": "peron",
+          "displayName": "Peron",
+          "type": "number"
+        },
+        {
+          "name": "cena",
+          "displayName": "Cena",
+          "type": "number"
+        },
+        {
+          "name": "popust",
+          "displayName": "Popust",
+          "type": "text"
+        },
+        {
+          "name": "stanicnausluga",
+          "displayName": "Stanična usluga",
+          "type": "number"
+        },
+        {
+          "name": "placanjeId",
+          "displayName": "Plaćanje",
+          "type": {
+            "placanjeId": "number",
+            "tipplacanja": "text"
+          }
+        },
+        {
+          "name": "voznjaId",
+          "displayName": "Vožnja",
+          "type": {
+            "voznjaId": "number",
+            "voznjaId": "number"
+          }
+        }
+      ]
+    },
+    {
+      "urlName": "korisnickinalog",
+      "nameSing": "Korisnički nalog",
+      "namePlu": "Korisnički nalozi",
+      "attributes": [
+        {
+          "name": "korisnickinalogId",
+          "displayName": "ID korisničkog naloga",
+          "type": "number"
+        },
+        {
+          "name": "korisnickoime",
+          "displayName": "Korisničko ime",
+          "type": "text"
+        },
+        {
+          "name": "korisnickiemail",
+          "displayName": "Korisnički e-mail",
+          "type": "text"
+        },
+        {
+          "name": "korisnickalozinka",
+          "displayName": "Korisnička lozinka",
+          "type": "text"
+        },
+        {
+          "name": "zaposlenId",
+          "displayName": "Zaposlen",
+          "type": {
+            "zaposlenId": "number",
+            "ime": "text",
+            "prezime": "text"
+          }
+        }
+      ]
+    },
+    {
+      "urlName": "medjustajaliste",
+      "nameSing": "Međustajalište",
+      "namePlu": "Međustajališta",
+      "attributes": [
+        {
+          "name": "medjustajalisteId",
+          "displayName": "ID međustajališta",
+          "type": "number"
+        },
+        {
+          "name": "vremedolaskanastajaliste",
+          "displayName": "Vreme dolaska na stajalište",
+          "type": "date"
+        },
+        {
+          "name": "stajalisteId",
+          "displayName": "Stajalište",
+          "type": {
+            "stajalisteId": "number",
+            "nazivstajalista": "text"
+          }
+        },
+        {
+          "name": "relacijaId",
+          "displayName": "Relacija",
+          "type": {
+            "relacijaId": "number",
+            "relacijaId": "number"
+          }
+        }
+      ]
+    },
+    {
+      "urlName": "placanje",
+      "nameSing": "Plaćanje",
+      "namePlu": "Plaćanja",
+      "attributes": [
+        {
+          "name": "placanjeId",
+          "displayName": "ID plaćanja",
+          "type": "number"
+        },
+        {
+          "name": "tipplacanja",
+          "displayName": "Tip plaćanja",
+          "type": "text"
+        },
+        {
+          "name": "datumplacanja",
+          "displayName": "Datum plaćanja",
+          "type": "date"
+        },
+        {
+          "name": "vremeplacanja",
+          "displayName": "Vreme plaćanja",
+          "type": "date"
+        },
+        {
+          "name": "kartaId",
+          "displayName": "Karta",
+          "type": {
+            "kartaId": "number",
+            "kartaId": "number"
+          }
+        }
+      ]
+    },
+    {
+      "urlName": "relacija",
+      "nameSing": "Relacija",
+      "namePlu": "Relacije",
+      "attributes": [
+        {
+          "name": "relacijaId",
+          "displayName": "ID relacije",
+          "type": "number"
+        },
+        {
+          "name": "vremepolaska",
+          "displayName": "Vreme polaska",
+          "type": "date"
+        },
+        {
+          "name": "vremedolaska",
+          "displayName": "Vreme dolaska",
+          "type": "date"
+        },
+        {
+          "name": "krajnjestajalisteId",
+          "displayName": "Krajnje stajalište",
+          "type": {
+            "stajalisteId": "number",
+            "nazivstajalista": "text"
+          }
+        },
+        {
+          "name": "polaznostajalisteId",
+          "displayName": "Polazno stajalište",
+          "type": {
+            "stajalisteId": "number",
+            "nazivstajalista": "text"
+          }
+        },
+        {
+          "name": "tipsaobracajaId",
+          "displayName": "Tip saobraćaja",
+          "type": {
+            "tipsaobracajaId": "number",
+            "tipsaobracajaNaziv": "text"
+          }
+        }
+      ]
+    },
+    {
+      "urlName": "rezervacija",
+      "nameSing": "Rezervacija",
+      "namePlu": "Rezervacije",
+      "attributes": [
+        {
+          "name": "rezervacijaId",
+          "displayName": "ID rezervacije",
+          "type": "number"
+        },
+        {
+          "name": "datumrezervacije",
+          "displayName": "Datum rezervacije",
+          "type": "date"
+        },
+        {
+          "name": "vremerezervacije",
+          "displayName": "Vreme reyervacije",
+          "type": "date"
+        },
+        {
+          "name": "tipreyervisanja",
+          "displayName": "Tip rezervisanja",
+          "type": "text"
+        },
+        {
+          "name": "kartaId",
+          "displayName": "Karta",
+          "type": {
+            "kartaId": "number",
+            "kartaId": "number"
+          }
+        }
+      ]
+    },
+    {
+      "urlName": "smena",
+      "nameSing": "Smena",
+      "namePlu": "Smene",
+      "attributes": [
+        {
+          "name": "smenaId",
+          "displayName": "ID smene",
+          "type": "number"
+        },
+        {
+          "name": "nazivsmene",
+          "displayName": "Naziv smene",
+          "type": "text"
+        },
+        {
+          "name": "pocetaksmene",
+          "displayName": "Početak smene",
+          "type": "text"
+        },
+        {
+          "name": "krajsmene",
+          "displayName": "Kraj smene",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "urlName": "stajaliste",
+      "nameSing": "Stajalište",
+      "namePlu": "Stajališta",
+      "attributes": [
+        {
+          "name": "stajalisteId",
+          "displayName": "ID stajališta",
+          "type": "number"
+        },
+        {
+          "name": "nazivstajalista",
+          "displayName": "Naziv stajališta",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "urlName": "tipsaobracaja",
+      "nameSing": "Tip saobraćaja",
+      "namePlu": "Tipovi saobraćaja",
+      "attributes": [
+        {
+          "name": "tipsaobracajaId",
+          "displayName": "ID tipa saobraćaja",
+          "type": "number"
+        },
+        {
+          "name": "tipsaobracajaNaziv",
+          "displayName": "Naziv tipa saobraćaja",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "urlName": "vozilo",
       "nameSing": "Vozilo",
       "namePlu": "Vozila",
       "attributes": [
         {
           "name": "voziloId",
-          ,
           "displayName": "ID vozila",
           "type": "number"
         },
@@ -23,7 +376,7 @@
           "type": "number"
         },
         {
-          "name": "zaposlen",
+          "name": "zaposlenId",
           "displayName": "Zaposlen",
           "type": {
             "zaposlenId": "number",
@@ -34,6 +387,55 @@
       ]
     },
     {
+      "urlName": "voznja",
+      "nameSing": "Vožnja",
+      "namePlu": "Vožnje",
+      "attributes": [
+        {
+          "name": "voznjaId",
+          "displayName": "ID vožnje",
+          "type": "number"
+        },
+        {
+          "name": "brojkola",
+          "displayName": "Broj kola",
+          "type": "number"
+        },
+        {
+          "name": "datumvoznje",
+          "displayName": "Datum vožnje",
+          "type": "date"
+        },
+        {
+          "name": "voziloId",
+          "displayName": "Vozilo",
+          "type": {
+            "voziloId": "number",
+            "registracija": "text"
+          }
+        },
+        {
+          "name": "relacijaId",
+          "displayName": "Relacija",
+          "type": {
+            "relacijaId": "number",
+            "relacijaId": "number"
+          }
+        },
+        {
+          "name": "zaposlenId",
+          "displayName": "Zaposlen",
+          "type": {
+            "zaposlenId": "number",
+            "ime": "text",
+            "prezime": "text"
+          }
+        }
+      ]
+    },
+
+    {
+      "urlName": "zanimanje",
       "nameSing": "Zanimanje",
       "namePlu": "Zanimanja",
       "attributes": [
@@ -46,6 +448,70 @@
           "name": "nazivzanimanja",
           "displayName": "Naziv zanimanja",
           "type": "text"
+        }
+      ]
+    },
+    {
+      "urlName": "zaposlen",
+      "nameSing": "Zaposlen",
+      "namePlu": "Zaposleni",
+      "attributes": [
+        {
+          "name": "zaposlenId",
+          "displayName": "ID zaposlenog",
+          "type": "number"
+        },
+        {
+          "name": "ime",
+          "displayName": "Ime",
+          "type": "text"
+        },
+        {
+          "name": "prezime",
+          "displayName": "Prezime",
+          "type": "text"
+        },
+        {
+          "name": "jmbg",
+          "displayName": "JMBG",
+          "type": "number"
+        },
+        {
+          "name": "adresaprebivalista",
+          "displayName": "Adresa prebivališta",
+          "type": "text"
+        },
+        {
+          "name": "kontakttelefon",
+          "displayName": "Kontakt telefon",
+          "type": "number"
+        },
+        {
+          "name": "datumzaposljavanja",
+          "displayName": "Datum zapošljavanja",
+          "type": "date"
+        },
+        {
+          "name": "status",
+          "displayName": "Status",
+          "type": "boolean"
+        },
+        {
+          "name": "korisnickinalogId",
+          "displayName": "Korisnički nalog",
+          "type": {
+            "korisnickinalogId": "number",
+            "korisnickoime": "text",
+            "korisnickiemail": "text"
+          }
+        },
+        {
+          "name": "zanimanjeId",
+          "displayName": "Zanimanje",
+          "type": {
+            "zanimanjeId": "number",
+            "nazivzanimanja": "text"
+          }
         }
       ]
     }
