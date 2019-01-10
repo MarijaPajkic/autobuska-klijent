@@ -1,11 +1,13 @@
 {
   "title": "Autobuska",
   "description": "Klijentska web aplikacija za diplomski rad.",
+  "apiUrl": "http://192.168.0.14:8080/AutobuskaWebService",
   "entities": [
     {
       "urlName": "dnevnasmena",
       "nameSing": "Dnevna smena",
       "namePlu": "Dnevne smene",
+      "path": "/dnevnasmena",
       "attributes": [
         {
           "name": "dnevnasmenaId",
@@ -21,17 +23,19 @@
           "name": "zaposlenId",
           "displayName": "Zaposlen",
           "type": {
-            "zaposlenId": "number",
-            "ime": "text",
-            "prezime": "text"
+            "key": "zaposlenId",
+            "value": [
+              "ime",
+              "prezime"
+            ]
           }
         },
         {
           "name": "smenaId",
           "displayName": "Smena",
           "type": {
-            "smenaId": "number",
-            "nazivsmene": "text"
+            "key": "smenaId",
+            "value": "nazivsmene"
           }
         }
       ]
@@ -40,6 +44,7 @@
       "urlName": "karta",
       "nameSing": "Karta",
       "namePlu": "Karte",
+      "path": "/karta",
       "attributes": [
         {
           "name": "kartaId",
@@ -95,16 +100,16 @@
           "name": "placanjeId",
           "displayName": "Plaćanje",
           "type": {
-            "placanjeId": "number",
-            "tipplacanja": "text"
+            "key": "placanjeId",
+            "value": "tipplacanja"
           }
         },
         {
           "name": "voznjaId",
           "displayName": "Vožnja",
           "type": {
-            "voznjaId": "number",
-            "voznjaId": "number"
+            "key": "voznjaId",
+            "value": "voznjaId"
           }
         }
       ]
@@ -113,6 +118,7 @@
       "urlName": "korisnickinalog",
       "nameSing": "Korisnički nalog",
       "namePlu": "Korisnički nalozi",
+      "path": "/korisnickinalog",
       "attributes": [
         {
           "name": "korisnickinalogId",
@@ -138,9 +144,11 @@
           "name": "zaposlenId",
           "displayName": "Zaposlen",
           "type": {
-            "zaposlenId": "number",
-            "ime": "text",
-            "prezime": "text"
+            "key": "zaposlenId",
+            "value": [
+              "ime",
+              "prezime"
+            ]
           }
         }
       ]
@@ -149,6 +157,7 @@
       "urlName": "medjustajaliste",
       "nameSing": "Međustajalište",
       "namePlu": "Međustajališta",
+      "path": "/medjustajaliste",
       "attributes": [
         {
           "name": "medjustajalisteId",
@@ -164,16 +173,16 @@
           "name": "stajalisteId",
           "displayName": "Stajalište",
           "type": {
-            "stajalisteId": "number",
-            "nazivstajalista": "text"
+            "key": "stajalisteId",
+            "value": "nazivstajalista"
           }
         },
         {
           "name": "relacijaId",
           "displayName": "Relacija",
           "type": {
-            "relacijaId": "number",
-            "relacijaId": "number"
+            "key": "relacijaId",
+            "value": "relacijaId"
           }
         }
       ]
@@ -182,6 +191,7 @@
       "urlName": "placanje",
       "nameSing": "Plaćanje",
       "namePlu": "Plaćanja",
+      "path": "/placanje",
       "attributes": [
         {
           "name": "placanjeId",
@@ -207,8 +217,8 @@
           "name": "kartaId",
           "displayName": "Karta",
           "type": {
-            "kartaId": "number",
-            "kartaId": "number"
+            "key": "kartaId",
+            "value": "kartaId"
           }
         }
       ]
@@ -217,6 +227,7 @@
       "urlName": "relacija",
       "nameSing": "Relacija",
       "namePlu": "Relacije",
+      "path": "/relacija",
       "attributes": [
         {
           "name": "relacijaId",
@@ -237,24 +248,24 @@
           "name": "krajnjestajalisteId",
           "displayName": "Krajnje stajalište",
           "type": {
-            "stajalisteId": "number",
-            "nazivstajalista": "text"
+            "key": "stajalisteId",
+            "value": "nazivstajalista"
           }
         },
         {
           "name": "polaznostajalisteId",
           "displayName": "Polazno stajalište",
           "type": {
-            "stajalisteId": "number",
-            "nazivstajalista": "text"
+            "key": "stajalisteId",
+            "value": "nazivstajalista"
           }
         },
         {
           "name": "tipsaobracajaId",
           "displayName": "Tip saobraćaja",
           "type": {
-            "tipsaobracajaId": "number",
-            "tipsaobracajaNaziv": "text"
+            "key": "tipsaobracajaId",
+            "value": "tipsaobracajaNaziv"
           }
         }
       ]
@@ -263,6 +274,7 @@
       "urlName": "rezervacija",
       "nameSing": "Rezervacija",
       "namePlu": "Rezervacije",
+      "path": "/rezervacija",
       "attributes": [
         {
           "name": "rezervacijaId",
@@ -288,8 +300,8 @@
           "name": "kartaId",
           "displayName": "Karta",
           "type": {
-            "kartaId": "number",
-            "kartaId": "number"
+            "key": "kartaId",
+            "value": "kartaId"
           }
         }
       ]
@@ -298,6 +310,7 @@
       "urlName": "smena",
       "nameSing": "Smena",
       "namePlu": "Smene",
+      "path": "/smena",
       "attributes": [
         {
           "name": "smenaId",
@@ -325,6 +338,7 @@
       "urlName": "stajaliste",
       "nameSing": "Stajalište",
       "namePlu": "Stajališta",
+      "path": "/stajaliste",
       "attributes": [
         {
           "name": "stajalisteId",
@@ -342,6 +356,7 @@
       "urlName": "tipsaobracaja",
       "nameSing": "Tip saobraćaja",
       "namePlu": "Tipovi saobraćaja",
+      "path": "/tipsaobracaja",
       "attributes": [
         {
           "name": "tipsaobracajaId",
@@ -359,6 +374,7 @@
       "urlName": "vozilo",
       "nameSing": "Vozilo",
       "namePlu": "Vozila",
+      "path": "/vozilo",
       "attributes": [
         {
           "name": "voziloId",
@@ -379,9 +395,11 @@
           "name": "zaposlenId",
           "displayName": "Zaposlen",
           "type": {
-            "zaposlenId": "number",
-            "ime": "text",
-            "prezime": "text"
+            "key": "zaposlenId",
+            "value": [
+              "ime",
+              "prezime"
+            ]
           }
         }
       ]
@@ -390,6 +408,7 @@
       "urlName": "voznja",
       "nameSing": "Vožnja",
       "namePlu": "Vožnje",
+      "path": "/voznja",
       "attributes": [
         {
           "name": "voznjaId",
@@ -410,25 +429,27 @@
           "name": "voziloId",
           "displayName": "Vozilo",
           "type": {
-            "voziloId": "number",
-            "registracija": "text"
+            "key": "voziloId",
+            "value": "registracija"
           }
         },
         {
           "name": "relacijaId",
           "displayName": "Relacija",
           "type": {
-            "relacijaId": "number",
-            "relacijaId": "number"
+            "key": "relacijaId",
+            "value": "relacijaId"
           }
         },
         {
           "name": "zaposlenId",
           "displayName": "Zaposlen",
           "type": {
-            "zaposlenId": "number",
-            "ime": "text",
-            "prezime": "text"
+            "key": "zaposlenId",
+            "value": [
+              "ime",
+              "prezime"
+            ]
           }
         }
       ]
@@ -438,6 +459,7 @@
       "urlName": "zanimanje",
       "nameSing": "Zanimanje",
       "namePlu": "Zanimanja",
+      "path": "/zanimanje",
       "attributes": [
         {
           "name": "zanimanjeId",
@@ -455,6 +477,7 @@
       "urlName": "zaposlen",
       "nameSing": "Zaposlen",
       "namePlu": "Zaposleni",
+      "path": "/zaposlen",
       "attributes": [
         {
           "name": "zaposlenId",
@@ -500,17 +523,16 @@
           "name": "korisnickinalogId",
           "displayName": "Korisnički nalog",
           "type": {
-            "korisnickinalogId": "number",
-            "korisnickoime": "text",
-            "korisnickiemail": "text"
+            "key": "korisnickinalogId",
+            "value": "korisnickoime"
           }
         },
         {
           "name": "zanimanjeId",
           "displayName": "Zanimanje",
           "type": {
-            "zanimanjeId": "number",
-            "nazivzanimanja": "text"
+            "key": "zanimanjeId",
+            "value": "nazivzanimanja"
           }
         }
       ]
