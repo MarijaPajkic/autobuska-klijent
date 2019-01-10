@@ -1,4 +1,6 @@
 .icon-link {
+    font-size: 1.5rem;
+    padding-left: 10px;
     text-decoration: none;
     color: black;
     opacity: 1.0;
@@ -11,9 +13,41 @@
 }
 
 .content-nav {
-    margin: 0; 
-    position: absolute; 
-    margin-top: 30px; 
-    left: 50%; 
+    margin: 0;
+    position: absolute;
+    margin-top: 30px;
+    left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.profile-link {
+    color: rgba(255, 255, 255, .5);
+}
+
+.profile-link:hover {
+    color: rgba(255, 255, 255, .75);
+}
+
+.btn-outline-pag {
+    color: #28a745;
+    border-color: #28a745;
+}
+
+.btn-outline-pag:hover {
+    color: #fff;
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.btn-outline-id {
+    color: #28a745;
+}
+
+.btn-outline-id:hover {
+    color: #28a745;
+    opacity: .5;
+}
+
+.sm {
+    font-size: 15px;
 }
