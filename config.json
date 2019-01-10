@@ -1,0 +1,53 @@
+{
+  "title": "Autobuska",
+  "description": "Klijentska web aplikacija za diplomski rad.",
+  "entities": [
+    {
+      "nameSing": "Vozilo",
+      "namePlu": "Vozila",
+      "attributes": [
+        {
+          "name": "voziloId",
+          ,
+          "displayName": "ID vozila",
+          "type": "number"
+        },
+        {
+          "name": "registracija",
+          "displayName": "Registracija",
+          "type": "text"
+        },
+        {
+          "name": "brojsedista",
+          "displayName": "Broj sedišta",
+          "type": "number"
+        },
+        {
+          "name": "zaposlen",
+          "displayName": "Zaposlen",
+          "type": {
+            "zaposlenId": "number",
+            "ime": "text",
+            "prezime": "text"
+          }
+        }
+      ]
+    },
+    {
+      "nameSing": "Zanimanje",
+      "namePlu": "Zanimanja",
+      "attributes": [
+        {
+          "name": "zanimanjeId",
+          "displayName": "ID zanimanja",
+          "type": "number"
+        },
+        {
+          "name": "nazivzanimanja",
+          "displayName": "Naziv zanimanja",
+          "type": "text"
+        }
+      ]
+    }
+  ]
+}
