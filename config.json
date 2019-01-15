@@ -1,7 +1,7 @@
 {
   "title": "Autobuska",
   "description": "Klijentska web aplikacija za diplomski rad.",
-  "apiUrl": "http://192.168.0.14:8080/AutobuskaWebService",
+  "apiUrl": "http://localhost:8080/AutobuskaWebService",
   "entities": [
     {
       "urlName": "dnevnasmena",
@@ -454,7 +454,6 @@
         }
       ]
     },
-
     {
       "urlName": "zanimanje",
       "nameSing": "Zanimanje",
@@ -497,7 +496,7 @@
         {
           "name": "jmbg",
           "displayName": "JMBG",
-          "type": "number"
+          "type": "text"
         },
         {
           "name": "adresaprebivalista",
@@ -507,7 +506,7 @@
         {
           "name": "kontakttelefon",
           "displayName": "Kontakt telefon",
-          "type": "number"
+          "type": "text"
         },
         {
           "name": "datumzaposljavanja",

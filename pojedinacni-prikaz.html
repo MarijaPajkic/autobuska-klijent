@@ -67,32 +67,17 @@
         <div class="col-md-12">
             <div class="row">
                 <div class="col" style="float: left; margin-bottom: 30px">
-                    <h1>Vozilo</h1>
+                    <h1 id="naslov"></h1>
                 </div>
             </div>
 
             <table class="table table-borderless col-md-4">
-                <tbody>
-                <tr>
-                    <th scope="row">ID vozila</th>
-                    <td>1</td>
-                </tr>
-                <tr>
-                    <th scope="row">Registracija</th>
-                    <td>PO 123 BG</td>
-                </tr>
-                <tr>
-                    <th scope="row">Broj sedišta</th>
-                    <td>52</td>
-                </tr>
-                <tr>
-                    <th scope="row">Vozač</th>
-                    <td>Petar Petrović</td>
-                </tr>
+                <tbody id="objectdata">
                 </tbody>
             </table>
 
-            <button type="button" class="btn btn-outline-warning">Izmeni</button>
+            <button type="button" class="btn btn-outline-warning" onclick="javascript:onIzmena();return false;">Izmeni
+            </button>
             <button type="button" class="btn btn-outline-danger">Obriši</button>
 
         </div>
@@ -105,10 +90,47 @@
 <footer class="container">
     <p>&copy; Company 2017-2018</p>
 </footer>
-<script crossorigin="anonymous"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-<script>window.jQuery || document.write('<script src="/docs/4.2/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+<script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="js/jquery.js"><\/script>')</script>
 <script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/custom.js"></script>
+<script>
+    const urlParams = getUrlParams();
+    let entitet = "";
+    let id = 0;
+    for (let i = 0; i < urlParams.length; i++) {
+        const pair = urlParams[i].split('=');
+        if (pair[0] === 'entitet') {
+            if (pair[1].split(',').length > 0) {
+                const entities = pair[1].split(',');
+                entitet = entities[0];
+            } else {
+                entitet = pair[1];
+            }
+        } else if (pair[0] === 'id') {
+            if (pair[1].split(',').length > 0) {
+                const ids = pair[1].split(',');
+                id = ids[0];
+            } else {
+                id = pair[1];
+            }
+        }
+    }
+
+    let entityData = getEntityData(entitet);
+    if (id != 0 && entitet !== "" && entityData !== undefined && entityData != null) {
+        loadOne('objectdata', entitet, id);
+        $('#naslov').text(entityData['nameSing'] + ' ' + id);
+    } else {
+        window.location.replace('index.html');
+    }
+
+    function onIzmena() {
+        window.location.replace('dodaj-izmeni.html?akcija=izmeni&entitet=' + entityData['urlName'] + '&id=' + id);
+    }
+</script>
 </body>
 </html>

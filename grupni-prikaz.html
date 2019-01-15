@@ -64,96 +64,9 @@
     <!-- Example row of columns -->
     <div class="row">
         <div class="col-md-12" style="padding-bottom: 55px;">
-            <div class="row">
-                <div class="col" style="float: left; margin-top: 20px;">
-                    <h1>Vozila <a class="icon-link btn-outline-id" href="dodaj-izmeni.html"><span
-                            class="fas fa-plus-circle"></span></a></h1>
-                </div>
+            <div class="row" id="content">
 
-                <div class="col" style="float: right; margin-top: 10px;">
-                    <div class="row" style="margin-right: 20px;">
-                        <div class="col-9" style="float: left; padding-right: 5px; margin-top: 20px">
-                            <input aria-describedby="Pretraga vozila" aria-label="Pretraga" class="form-control"
-                                   placeholder="Pretraži..."
-                                   type="text"/>
-                        </div>
-                        <div class="col-3" style="float: right; padding-left: 5px; margin-top: 20px">
-                            <button class="btn btn-outline-success" type="button">Pretraži</button>
-                        </div>
-                    </div>
-                </div>
             </div>
-
-            <table class="table table-hover" style="margin-top: 20px;">
-                <thead>
-                <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Registracija</th>
-                    <th scope="col">Broj sedišta</th>
-                    <th scope="col">Vozač</th>
-                    <th scope="col">Akcije</th>
-                </tr>
-                </thead>
-
-                <tbody>
-                <tr>
-                    <th scope="row"><a class="btn-outline-id" href="pojedinacni-prikaz.html">1</a></th>
-                    <td>PO 123 BG</td>
-                    <td>52</td>
-                    <td>Petar Petrovic</td>
-                    <td>
-                        <a class="icon-link btn-outline-id sm" href="pojedinacni-prikaz.html"><span
-                                class="fas fa-eye"></span></a>&nbsp;
-                        <a class="icon-link btn-outline-id sm" href="dodaj-izmeni.html"><span
-                                class="fas fa-pencil-alt"></span></a>&nbsp;
-                        <a class="icon-link btn-outline-id sm" href=""><span class="fas fa-minus-circle"></span></a>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row"><a class="btn-outline-id" href="pojedinacni-prikaz.html">2</a></th>
-                    <td>PN 123 JA</td>
-                    <td>56</td>
-                    <td>Žika Petrovic</td>
-                    <td>
-                        <a class="icon-link btn-outline-id sm" href="pojedinacni-prikaz.html"><span
-                                class="fas fa-eye"></span></a>&nbsp;
-                        <a class="icon-link btn-outline-id sm" href="dodaj-izmeni.html"><span
-                                class="fas fa-pencil-alt"></span></a>&nbsp;
-                        <a class="icon-link btn-outline-id sm" href=""><span class="fas fa-minus-circle"></span></a>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row"><a class="btn-outline-id" href="pojedinacni-prikaz.html">3</a></th>
-                    <td>JA 123 TI</td>
-                    <td>54</td>
-                    <td>Jova Petrovic</td>
-                    <td>
-                        <a class="icon-link btn-outline-id sm" href="pojedinacni-prikaz.html"><span
-                                class="fas fa-eye"></span></a>&nbsp;
-                        <a class="icon-link btn-outline-id sm" href="dodaj-izmeni.html"><span
-                                class="fas fa-pencil-alt"></span></a>&nbsp;
-                        <a class="icon-link btn-outline-id sm" href=""><span class="fas fa-minus-circle"></span></a>
-                    </td>
-                </tr>
-                </tbody>
-            </table>
-            <nav aria-label="Page navigation example" class="content-nav">
-                <ul class="pagination">
-                    <li class="page-item">
-                        <a aria-label="Previous" class="page-link btn-outline-pag" href="#">
-                            <span aria-hidden="true">&laquo;</span>
-                        </a>
-                    </li>
-                    <li class="page-item"><a class="page-link btn-outline-pag" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link btn-outline-pag" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link btn-outline-pag" href="#">3</a></li>
-                    <li class="page-item">
-                        <a aria-label="Next" class="page-link btn-outline-pag" href="#">
-                            <span aria-hidden="true">&raquo;</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
         </div>
     </div>
 
@@ -164,10 +77,28 @@
 <footer class="container">
     <p>&copy; Company 2017-2018</p>
 </footer>
-<script crossorigin="anonymous"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-<script>window.jQuery || document.write('<script src="/docs/4.2/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+<script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="js/jquery.js"><\/script>')</script>
 <script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/custom.js"></script>
+<script>
+    const urlParams = getUrlParams();
+    for (let i = 0; i < urlParams.length; i++) {
+        const pair = urlParams[i].split('=');
+        if (pair[0] === 'entitet') {
+            if (pair[1].split(',').length > 0) {
+                const entities = pair[1].split(',');
+                for (let en of entities) {
+                    loadAll(en, false, 'content');
+                }
+            } else {
+                loadAll(pair[1], false, 'content');
+            }
+        }
+    }
+</script>
 </body>
 </html>
