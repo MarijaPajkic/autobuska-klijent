@@ -8,6 +8,7 @@ const config = {
             "nameSing": "Dnevna smena",
             "namePlu": "Dnevne smene",
             "path": "/dnevnasmena",
+            "authorized": ['Administrator', 'Menadzer zaposlenih'],
             "attributes": [
                 {
                     "name": "dnevnasmenaId",
@@ -45,6 +46,7 @@ const config = {
             "nameSing": "Karta",
             "namePlu": "Karte",
             "path": "/karta",
+            "authorized": ['Administrator', 'Blagajnik'],
             "attributes": [
                 {
                     "name": "kartaId",
@@ -69,7 +71,7 @@ const config = {
                 {
                     "name": "vremepolaska",
                     "displayName": "Vreme polaska",
-                    "type": "date"
+                    "type": "text"
                 },
                 {
                     "name": "brojsedista",
@@ -119,6 +121,7 @@ const config = {
             "nameSing": "Korisnički nalog",
             "namePlu": "Korisnički nalozi",
             "path": "/korisnickinalog",
+            "authorized": ['Administrator', 'Direktor', 'Menadzer zaposlenih'],
             "attributes": [
                 {
                     "name": "korisnickinalogId",
@@ -158,6 +161,7 @@ const config = {
             "nameSing": "Međustajalište",
             "namePlu": "Međustajališta",
             "path": "/medjustajaliste",
+            "authorized": ['Administrator', 'Direktor', 'Menadzer saobracaja'],
             "attributes": [
                 {
                     "name": "medjustajalisteId",
@@ -167,10 +171,10 @@ const config = {
                 {
                     "name": "vremedolaskanastajaliste",
                     "displayName": "Vreme dolaska na stajalište",
-                    "type": "date"
+                    "type": "text"
                 },
                 {
-                    "name": "stajalisteId",
+                    "name": "stajaliste",
                     "displayName": "Stajalište",
                     "type": {
                         "key": "stajalisteId",
@@ -178,7 +182,7 @@ const config = {
                     }
                 },
                 {
-                    "name": "relacijaId",
+                    "name": "relacija",
                     "displayName": "Relacija",
                     "type": {
                         "key": "relacijaId",
@@ -192,6 +196,7 @@ const config = {
             "nameSing": "Plaćanje",
             "namePlu": "Plaćanja",
             "path": "/placanje",
+            "authorized": ['Administrator', 'Blagajnik'],
             "attributes": [
                 {
                     "name": "placanjeId",
@@ -211,7 +216,7 @@ const config = {
                 {
                     "name": "vremeplacanja",
                     "displayName": "Vreme plaćanja",
-                    "type": "date"
+                    "type": "text"
                 },
                 {
                     "name": "kartaId",
@@ -228,6 +233,7 @@ const config = {
             "nameSing": "Relacija",
             "namePlu": "Relacije",
             "path": "/relacija",
+            "authorized": ['Administrator', 'Direktor', 'Menadzer saobracaja'],
             "attributes": [
                 {
                     "name": "relacijaId",
@@ -237,15 +243,15 @@ const config = {
                 {
                     "name": "vremepolaska",
                     "displayName": "Vreme polaska",
-                    "type": "date"
+                    "type": "text"
                 },
                 {
                     "name": "vremedolaska",
                     "displayName": "Vreme dolaska",
-                    "type": "date"
+                    "type": "text"
                 },
                 {
-                    "name": "krajnjestajalisteId",
+                    "name": "krajnjestajaliste",
                     "displayName": "Krajnje stajalište",
                     "type": {
                         "key": "stajalisteId",
@@ -253,7 +259,7 @@ const config = {
                     }
                 },
                 {
-                    "name": "polaznostajalisteId",
+                    "name": "polaznostajaliste",
                     "displayName": "Polazno stajalište",
                     "type": {
                         "key": "stajalisteId",
@@ -261,7 +267,7 @@ const config = {
                     }
                 },
                 {
-                    "name": "tipsaobracajaId",
+                    "name": "tipsaobracaja",
                     "displayName": "Tip saobraćaja",
                     "type": {
                         "key": "tipsaobracajaId",
@@ -275,6 +281,7 @@ const config = {
             "nameSing": "Rezervacija",
             "namePlu": "Rezervacije",
             "path": "/rezervacija",
+            "authorized": ['Administrator', 'Blagajnik'],
             "attributes": [
                 {
                     "name": "rezervacijaId",
@@ -288,11 +295,11 @@ const config = {
                 },
                 {
                     "name": "vremerezervacije",
-                    "displayName": "Vreme reyervacije",
-                    "type": "date"
+                    "displayName": "Vreme rezervacije",
+                    "type": "text"
                 },
                 {
-                    "name": "tipreyervisanja",
+                    "name": "tiprezervisanja",
                     "displayName": "Tip rezervisanja",
                     "type": "text"
                 },
@@ -311,6 +318,7 @@ const config = {
             "nameSing": "Smena",
             "namePlu": "Smene",
             "path": "/smena",
+            "authorized": ['Administrator', 'Menadzer zaposlenih'],
             "attributes": [
                 {
                     "name": "smenaId",
@@ -339,6 +347,7 @@ const config = {
             "nameSing": "Stajalište",
             "namePlu": "Stajališta",
             "path": "/stajaliste",
+            "authorized": ['Administrator', 'Direktor', 'Menadzer saobracaja', 'Blagajnik'],
             "attributes": [
                 {
                     "name": "stajalisteId",
@@ -357,6 +366,7 @@ const config = {
             "nameSing": "Tip saobraćaja",
             "namePlu": "Tipovi saobraćaja",
             "path": "/tipsaobracaja",
+            "authorized": ['Administrator', 'Menadzer saobracaja'],
             "attributes": [
                 {
                     "name": "tipsaobracajaId",
@@ -375,6 +385,7 @@ const config = {
             "nameSing": "Vozilo",
             "namePlu": "Vozila",
             "path": "/vozilo",
+            "authorized": ['Administrator', 'Direktor', 'Menadzer saobracaja'],
             "attributes": [
                 {
                     "name": "voziloId",
@@ -409,6 +420,7 @@ const config = {
             "nameSing": "Vožnja",
             "namePlu": "Vožnje",
             "path": "/voznja",
+            "authorized": ['Administrator', 'Direktor', 'Menadzer saobracaja', 'Blagajnik'],
             "attributes": [
                 {
                     "name": "voznjaId",
@@ -459,6 +471,7 @@ const config = {
             "nameSing": "Zanimanje",
             "namePlu": "Zanimanja",
             "path": "/zanimanje",
+            "authorized": ['Administrator', 'Direktor', 'Menadzer zaposlenih'],
             "attributes": [
                 {
                     "name": "zanimanjeId",
@@ -477,6 +490,7 @@ const config = {
             "nameSing": "Zaposlen",
             "namePlu": "Zaposleni",
             "path": "/zaposlen",
+            "authorized": ['Administrator', 'Direktor', 'Menadzer zaposlenih'],
             "attributes": [
                 {
                     "name": "zaposlenId",
@@ -573,10 +587,28 @@ function loadAllHelper(url, elementId, searchedEntity, isIndex, isEditOrCreate =
     }).fail(function () {
         if (getLoadAllCountForEntity(searchedEntity) % 3 === 0) {
             resetLoadAllCountForEntity(searchedEntity);
+            alert('asd');
             window.location.replace('index.html');
         } else {
             incrementLoadAllCountForEntity(searchedEntity);
             loadAllHelper(url, elementId, searchedEntity, isIndex, isEditOrCreate, type);
+        }
+    });
+}
+
+function justLoadAll(entityName) {
+    const searchedEntity = getEntityData(entityName);
+    const url = config['apiUrl'] + searchedEntity['path'];
+    $.getJSON(url, null, function (data) {
+        entityObjects[searchedEntity['urlName']] = data;
+    }).fail(function () {
+        if (getLoadAllCountForEntity(searchedEntity) % 3 === 0) {
+            resetLoadAllCountForEntity(searchedEntity);
+            alert('asd');
+            window.location.replace('index.html');
+        } else {
+            incrementLoadAllCountForEntity(searchedEntity);
+            justLoadAll(entityName);
         }
     });
 }
@@ -621,12 +653,18 @@ function loadOneHelper(url, elementId, searchedEntity, izmena = false) {
                     if (typeof attribute['type'] === 'object') {
                         if (data[attribute['type']['key'].split('Id')[0]] !== undefined && data[attribute['type']['key'].split('Id')[0]] != null) {
                             $('#' + attribute['name']).val('' + data[attribute['type']['key'].split('Id')[0]][attribute['type']['key']]);
+                            $('#' + attribute['name'] + 'Helper').text('' + data[attribute['type']['key'].split('Id')[0]][attribute['type']['key']]);
+                            // $('#' + attribute['name']).text('' + data[attribute['type']['key'].split('Id')[0]][attribute['type']['key']]);
                         }
                     } else {
                         if (attribute['type'] === 'number' || attribute['type'] === 'text') {
                             $('#' + attribute['name']).val(data[attribute['name']]);
                         } else if (attribute['type'] === 'boolean') {
                             $('#' + attribute['name']).attr('checked', data[attribute['name']]);
+                        } else if (attribute['type'] === 'date') {
+                            const d = new Date(data[attribute['name']]);
+                            const dateString = d.getFullYear() + '-' + ("0" + (d.getMonth() + 1)).slice(-2) + '-' + ("0" + d.getDate()).slice(-2);
+                            $('#' + attribute['name']).val(dateString);
                         }
                     }
                 }
@@ -660,10 +698,10 @@ function createTable(elementId, entity, isIndex, data) {
                             class="fas fa-plus-circle"></span></a></h1>
                 </div>
 
-                <div class="col" style="float: right; margin-top: 10px;">
+                <!--<div class="col" style="float: right; margin-top: 10px;">
                     <div class="row" style="margin-right: 20px;">
                         <div class="col-9" style="float: left; padding-right: 5px; margin-top: 20px">
-                            <input aria-describedby="Pretraga vozila" aria-label="Pretraga" class="form-control"
+                            <input id="pretraga" aria-describedby="Pretraga vozila" aria-label="Pretraga" class="form-control"
                                    placeholder="Pretraži..."
                                    type="text"/>
                         </div>
@@ -671,11 +709,11 @@ function createTable(elementId, entity, isIndex, data) {
                             <button class="btn btn-outline-success" type="button">Pretraži</button>
                         </div>
                     </div>
-                </div>
+                </div>-->
 
             </div>
 
-            <table class="table table-hover" style="margin-top: 20px;">
+            <table class="table table-hover ` + (isIndex ? `table-responsive` : ``) + `" style="margin-top: 20px;">
                 <thead>
                 <tr>
                     ` + dataTableHeaderData(entity) + `
@@ -687,7 +725,7 @@ function createTable(elementId, entity, isIndex, data) {
                 </tbody>
             </table>
 
-            <nav aria-label="Page navigation example" class="content-nav">
+            <!--<nav aria-label="Page navigation example" class="content-nav">
                 <ul class="pagination">
                     <li class="page-item">
                         <a aria-label="Previous" class="page-link btn-outline-pag" href="#">
@@ -703,7 +741,7 @@ function createTable(elementId, entity, isIndex, data) {
                         </a>
                     </li>
                 </ul>
-            </nav>
+            </nav>-->
 
         </div>
         `);
@@ -735,12 +773,26 @@ function dataTableRowData(data, entity) {
             if (typeof attribute['type'] === 'object') {
                 const tmp = obj[attribute['name'].split('Id')[0]];
                 if (tmp !== undefined && tmp != null) {
-                    ret += obj[attribute['name'].split('Id')[0]][attribute['type']['value']];
+                    if (attribute['type']['value'] instanceof Array) {
+                        let valueToBe = '';
+                        for (let val of attribute['type']['value']) {
+                            valueToBe += obj[attribute['name'].split('Id')[0]][val];
+                        }
+                        ret += valueToBe;
+                    } else {
+                        ret += obj[attribute['name'].split('Id')[0]][attribute['type']['value']];
+                    }
                 } else {
                     ret += '/';
                 }
             } else {
-                ret += obj[attribute['name']];
+                if (attribute['type'] === 'date') {
+                    const d = new Date(obj[attribute['name']]);
+                    const dateString = d.getFullYear() + '-' + ("0" + (d.getMonth() + 1)).slice(-2) + '-' + ("0" + d.getDate()).slice(-2);
+                    ret += dateString;
+                } else {
+                    ret += obj[attribute['name']];
+                }
             }
             ret += `</td>
                     `;
@@ -753,7 +805,7 @@ function dataTableRowData(data, entity) {
                 <a class="icon-link btn-outline-id sm" href="dodaj-izmeni.html?akcija=izmeni&entitet=` +
             entity['urlName'] + `&id=` + obj[entity['attributes'][0]['name']] + `"><span
                         class="fas fa-pencil-alt"></span></a>&nbsp;
-                <a class="icon-link btn-outline-id sm" href="#"><span class="fas fa-minus-circle"></span></a>
+                <a class="icon-link btn-outline-id sm" onclick='javascript:onDeleteHelperStr("` + entity['urlName'] + `", ` + obj[entity['attributes'][0]['name']] + `); return false;'><span class="fas fa-minus-circle" style="color: #28a745;"></span></a>
             </td>
         </tr>
         `;
@@ -763,14 +815,20 @@ function dataTableRowData(data, entity) {
 }
 
 function createObjectDetailsTable(elementId, obj, entity) {
+    let d = null;
+    let dateString = '';
     for (let attribute of entity['attributes']) {
+        if (attribute['type'] === 'date') {
+            d = new Date(obj[attribute['name']]);
+            dateString = d.getFullYear() + '-' + ("0" + (d.getMonth() + 1)).slice(-2) + '-' + ("0" + d.getDate()).slice(-2);
+        }
         $('#' + elementId).append(`
         <tr>
             <th scope="row">` + attribute['displayName'] + `</th>
             <td>` + ((typeof attribute['type'] === 'object') ?
             (obj[attribute['name'].split('Id')[0]] !== undefined && obj[attribute['name'].split('Id')[0]] != null ?
                 obj[attribute['name'].split('Id')[0]][attribute['type']['value']] : '/') :
-            obj[attribute['name']]) + `</td>
+            (attribute['type'] === 'date' ? dateString : obj[attribute['name']])) + `</td>
         </tr>
         `);
     }
@@ -782,15 +840,18 @@ function createFormLayout(entity, elementId) {
         if (typeof attribute['type'] === "object") {
             // loadAll za taj entitet
             const selectEntityName = attribute['name'].split('Id')[0];
-            ret += `<div class="form-group">
+            ret += `<p id="` + attribute['name'] + 'Helper' + `" style="visibility: hidden;"></p><div class="form-group">
                         <label for="` + attribute['name'] + `">` + attribute['displayName'] + `</label>
                         <select class="form-control" id="` + attribute['name'] + `">
                         </select>
                     </div>`;
             // rasporedi elemente u SELECT-u
-            loadAll(selectEntityName, false, attribute['name'], true, attribute['type']);
+            loadAll(selectEntityName.indexOf('stajaliste') > -1 ? 'stajaliste' : selectEntityName, false, attribute['name'], true, attribute['type']);
         } else {
-            if (attribute['type'] === 'text' || attribute['type'] === 'number' || attribute['type'] === 'date') {
+            if (attribute === entity['attributes'][0]) {
+                continue;
+            }
+            if (attribute['type'] === 'text' || attribute['type'] === 'number' || attribute['type'] === 'date' || attribute['type'] === 'time') {
                 ret += createStandardInput(attribute);
             } else if (attribute['type'] === 'boolean') {
                 ret += createCheckboxInput(attribute);
@@ -835,9 +896,20 @@ function createCheckboxInput(attribute) {
 
 function createSelectOptions(searchedEntity, data, editOrCreateSelectId, type) {
     for (let obj of data) {
-        $('#' + editOrCreateSelectId).append(
-            `<option value="` + obj[type['key']] + `">` + obj[type['value']] + `</option>
+        if (type['value'] instanceof Array) {
+            let valueToBe = '';
+            for (let val of type['value']) {
+                valueToBe += obj[val] + ' ';
+            }
+            valueToBe = valueToBe.slice(0, -1);
+            $('#' + editOrCreateSelectId).append(
+                `<option value="` + obj[type['key']] + `">` + valueToBe + `</option>
             `);
+        } else {
+            $('#' + editOrCreateSelectId).append(
+                `<option value="` + obj[type['key']] + `">` + obj[type['value']] + `</option>
+            `);
+        }
     }
 }
 
@@ -846,26 +918,64 @@ function saveObject(entityName, isEdit = false) {
     let obj = {};
     for (let attribute of entityData['attributes']) {
         if (typeof attribute['type'] === 'object') {
-            obj[attribute['name'].split('Id')[0]] = entityObjects[attribute['name'].split('Id')[0]].filter(function (obj) {
-                return obj[attribute['name']] === +$('#' + attribute['name'])[0].value;
+            /*
+            const entityObjectName = attribute['name'].indexOf('stajaliste') > -1 ? 'stajaliste' : attribute['name'];
+            console.log(entityObjectName);
+            obj[attribute['name']] = entityObjects[entityObjectName].filter(function (obj) {
+                // attribute['name'].indexOf('stajaliste') > -1 ? 'stajalisteId' : attribute['name']
+                return obj[attribute['type']['key']] === +$('#' + attribute['name'])[0].value || obj[attribute['type']['key']] === $('#' + attribute['name'])[0].value;
             })[0];
             // obj[attribute['name']] = +$('#' + attribute['name'])[0].value;
+            */
+            const entityObjectName = attribute['name'].split('Id')[0].indexOf('stajaliste') > -1 ? 'stajaliste' : attribute['name'].split('Id')[0];
+            obj[attribute['name'].split('Id')[0]] = entityObjects[entityObjectName].filter(function (obj) {
+                return obj[attribute['type']['key']] === +$('#' + attribute['name'])[0].value || obj[attribute['type']['key']] === $('#' + attribute['name'])[0].value;
+
+            })[0];
+            let found = {};
+            found[attribute['type']['key']] = (attribute['name'].split('Id')[0].indexOf('voznja') > -1 ? $('#' + attribute['name'])[0].value : +$('#' + attribute['name'])[0].value);
+            found[attribute['type']['value']] = attribute['type']['value'] === attribute['type']['key'] ? found[attribute['type']['key']] : $('#' + attribute['name']).children("option").filter(":selected").text();
+            // obj[attribute['name']] = {};
+            // obj[attribute['name']] = +$('#' + attribute['name'])[0].value;
+            obj[attribute['name'].split('Id')[0]] = found;
         } else {
             if (attribute['type'] === 'number') {
+                // ukoliko je trenutni atribut zapravo ID atribut entiteta, onda stavi podrazumevajucu vrednost
+                if (attribute === entityData['attributes'][0]) {
+                    obj[attribute['name']] = 0;
+                    continue;
+                }
                 obj[attribute['name']] = +$('#' + attribute['name'])[0].value;
             } else if (attribute['type'] === 'boolean') {
                 obj[attribute['name']] = $('#' + attribute['name'])[0].checked;
+            } else if (attribute['type'] === 'date') {
+                obj[attribute['name']] = $('#' + attribute['name'])[0].value + 'T00:00:00+01:00';
             } else {
+                // ukoliko je trenutni atribut zapravo ID atribut entiteta, onda stavi podrazumevajucu vrednost
+                if (attribute === entityData['attributes'][0]) {
+                    obj[attribute['name']] = '';
+                    continue;
+                }
                 obj[attribute['name']] = $('#' + attribute['name'])[0].value;
             }
         }
     }
-    console.log(obj);
+    // console.log(obj);
+    // alert(JSON.stringify(obj));
     if (isEdit) {
-        const idVariable = entityData['path'].substr(1) + 'Id';
+        const urlParams = getUrlParams();
+        let id = 0;
+        for (const urlParam of urlParams) {
+            const pair = urlParam.split('=');
+            if (pair[0] === 'id') {
+                id = +pair[1];
+                obj[entityData['path'].substr(1) + 'Id'] = id;
+                break;
+            }
+        }
         $.ajax({
             type: "POST",
-            url: config.apiUrl + entityData['path'] + '/' + obj[idVariable],
+            url: config.apiUrl + entityData['path'] + '/' + id,
             data: JSON.stringify(obj),
             success: function (data) {
                 window.location.replace('grupni-prikaz.html?entitet=' + entityData['urlName']);
@@ -885,4 +995,203 @@ function saveObject(entityName, isEdit = false) {
     }
 
     // window.location.replace('pojedinacni-prikaz.html?entitet=zaposleni&id=1');
+}
+
+function saveRelacijaSaMedjustajalistima(medjustajalista) {
+    const searchedEntity = getEntityData('relacija');
+    const entityData = searchedEntity;
+    const url = config['apiUrl'] + searchedEntity['path'];
+    // prvo dobavljamo broj postojecih relacija (zbog ID buduce relacije)
+    $.getJSON(url + '/count', null, function (data) {
+        var obj = {};
+        for (const attribute of searchedEntity['attributes']) {
+            if (attribute === searchedEntity['attributes'][0]) {
+                continue;
+            }
+
+            if (typeof attribute['type'] === 'object') {
+                const entityObjectName = attribute['name'].indexOf('stajaliste') > -1 ? 'stajaliste' : attribute['name'];
+                console.log(entityObjectName);
+                obj[attribute['name']] = entityObjects[entityObjectName].filter(function (obj) {
+                    // attribute['name'].indexOf('stajaliste') > -1 ? 'stajalisteId' : attribute['name']
+                    return obj[attribute['type']['key']] === +$('#' + attribute['name'])[0].value || obj[attribute['type']['key']] === $('#' + attribute['name'])[0].value;
+                })[0];
+                // obj[attribute['name']] = +$('#' + attribute['name'])[0].value;
+            } else {
+                if (attribute['type'] === 'number') {
+                    obj[attribute['name']] = +$('#' + attribute['name'])[0].value;
+                } else if (attribute['type'] === 'boolean') {
+                    obj[attribute['name']] = $('#' + attribute['name'])[0].checked;
+                } else if (attribute['type'] === 'date') {
+                    obj[attribute['name']] = $('#' + attribute['name'])[0].value + 'T00:00:00+01:00';
+                } else {
+                    obj[attribute['name']] = $('#' + attribute['name'])[0].value;
+                }
+            }
+
+            // obj[attribute['name']] = $('#' + attribute['name'])[0].value;
+        }
+        $.ajax({
+            type: "POST",
+            url: url,
+            data: JSON.stringify(obj),
+            success: function (successDataRelacija) {
+                // console.log('Dodata relacija: ' + JSON.stringify(obj));
+                let medjustajalisteCount = 1;
+                for (const medjustajaliste of medjustajalista) {
+                    let medjustajalisteObj = {
+                        medjustajalisteId: 0,
+                        vremedolaskanastajaliste: '' + $('#' + medjustajaliste['vreme'])[0].value,
+                        stajaliste: {
+                            stajalisteId: +$('#' + medjustajaliste['stajaliste'])[0].value,
+                            nazivstajalista: $('#' + medjustajaliste['stajaliste']).children("option").filter(":selected").text()
+                        },
+                        relacija: {relacijaId: data + 1}
+                    };
+                    setTimeout(function () {
+                        $.ajax({
+                            type: "POST",
+                            url: config.apiUrl + '/medjustajaliste',
+                            data: JSON.stringify(medjustajalisteObj),
+                            success: function (successDataMedjustajaliste) {
+                                // console.log('Dodato medjustajaliste: ' + JSON.stringify(medjustajalisteObj));
+                            },
+                            contentType: 'application/json'
+                        });
+                    }, medjustajalisteCount * 500);
+                    medjustajalisteCount++;
+                    // console.log($('#' + medjustajaliste['stajaliste'])[0].value, $('#' + medjustajaliste['vreme'])[0].value);
+                }
+                setTimeout(function () {
+                    // alert('Pa dooodo sam');
+                    window.location.replace('grupni-prikaz.html?entitet=relacija');
+                }, 1000 * medjustajalisteCount);
+            },
+            contentType: 'application/json'
+        });
+    }).fail(function () {
+        saveRelacijaSaMedjustajalistima(medjustajalista);
+    });
+}
+
+
+/* AUTHENTICATION & AUTHORIZATION --- START */
+
+
+function checkAuthorization(entityName) {
+    const entityData = getEntityData(entityName);
+    const whoIsAuthorized = entityData['authorized']; // array stringova, zapravo
+    if (whoIsAuthorized !== undefined && whoIsAuthorized != null) {
+        return localStorage.getItem('zanimanje') !== undefined && localStorage.getItem('zanimanje') != null &&
+            whoIsAuthorized.indexOf(localStorage.getItem('zanimanje')) > -1;
+    }
+    return true;
+}
+
+function authenticate(username, password) {
+    $.ajax({
+        type: "POST",
+        url: config.apiUrl + '/korisnickinalog/auth',
+        data: JSON.stringify({username: username, password: password}),
+        success: function (data) {
+            // data : { korisnickinalog, zanimanje }
+            // ukoliko je korisnickinalog === 'anonymous' || zanimanje === '', onda nije ulogovan
+            if (data['korisnickinalog'] === 'anonymous' || data['zanimanje'] === '') {
+                // nije ulogovan, fak dis shit;
+                alert('poruka za sjeb');
+            } else {
+                localStorage.setItem('korisnickinalog', data['korisnickinalog']);
+                localStorage.setItem('zanimanje', data['zanimanje']);
+                window.location.replace('index.html');
+            }
+        },
+        contentType: 'application/json'
+    });
+}
+
+function isAuthenticated() {
+    return localStorage.getItem('korisnickinalog') != null && localStorage.getItem('korisnickinalog').length > 0 &&
+        localStorage.getItem('korisnickinalog') !== 'anonymous';
+}
+
+function getAuthorizedEntitiesForRole(zanimanje) {
+    const entities = config.entities.filter(entity => {
+        return entity['authorized'].includes(zanimanje);
+    });
+    let ret = [];
+    for (const en of entities) {
+        ret.push(en['urlName']);
+    }
+
+    return ret;
+}
+
+function navigationLinksMakeUp(authorizedForEntities) {
+    for (const entityUrlName of authorizedForEntities) {
+        $('#navigacija').append(`
+                <li class="nav-item">
+                    <a class="nav-link" href="grupni-prikaz.html?entitet=` + entityUrlName + `">` + getEntityData(entityUrlName)['namePlu'] + `</a>
+                </li>
+                `);
+    }
+}
+
+
+function login() {
+    const username = document.getElementById('korisnickoime').value;
+    const password = document.getElementById('lozinka').value;
+
+    if (validateInput()) {
+        // console.log(username, password);
+        authenticate(username, password);
+    }
+}
+
+function logout() {
+    localStorage.removeItem('korisnickinalog');
+    localStorage.removeItem('zanimanje');
+    window.location.replace('index.html');
+}
+
+function whoIsLoggedIn() {
+    alert(localStorage.getItem("korisnickinalog") + " " + localStorage.getItem("zanimanje"));
+}
+
+function validateInput() {
+    if (document.getElementById('korisnickoime').value.length > 0 && document.getElementById('lozinka').value.length > 0) {
+        document.getElementById('checkinput').style.visibility = 'hidden';
+        return true;
+    }
+    document.getElementById('checkinput').style.visibility = 'visible';
+    return false;
+}
+
+function isLogged() {
+    if (!isAuthenticated()) {
+        return ` <a href="" class="btn btn-outline-success mb-4 log" data-toggle="modal" data-target="#modalRegisterForm">Ulogujte se</a>`;
+    } else {
+        return `<span style="color: #28a745;">` + localStorage.getItem('korisnickinalog') + ', ' + localStorage.getItem('zanimanje') +
+            `</span>&nbsp;&nbsp;&nbsp;&nbsp; <button class="btn btn-outline-secondary mb-4 log" onclick="logout()">Logout</button>`;
+    }
+}
+
+
+/* AUTHENTICATION & AUTHORIZATION --- END */
+
+
+function deleteObject(entityData, id) {
+    $.ajax({
+        type: "POST",
+        url: config.apiUrl + entityData['path'] + '/delete/' + id,
+        success: function (data) {
+            window.location.replace('grupni-prikaz.html?entitet=' + entityData['urlName']);
+        },
+    });
+}
+
+function onDeleteHelperStr(entityName, id) {
+    const entityData = getEntityData(entityName);
+    if (confirm("Da li ste sigurni da želite da obrišete zapis?")) {
+        deleteObject(entityData, id);
+    }
 }

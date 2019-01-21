@@ -39,24 +39,12 @@
         <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-        <ul class="navbar-nav mr-auto">
+    <div class="collapse navbar-collapse" id="navmeni">
+        <ul class="navbar-nav mr-auto" id="navigacija">
             <li class="nav-item">
                 <a class="nav-link" href="index.html">Početna</a>
             </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Vozila <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Zaposleni</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Korisnici</a>
-            </li>
         </ul>
-
-        <a class="nav-link profile-link" href="#">Logout</a>
-
     </div>
 </nav>
 
@@ -74,9 +62,46 @@
 
 </div> <!-- /container -->
 
-<footer class="container">
-    <p>&copy; Company 2017-2018</p>
+
+<!-- Modal form-->
+<div class="modal fade" id="modalRegisterForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <h4 class="modal-title w-100 font-weight-bold">Logovanje</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-body mx-3">
+                <div class="md-form mb-5">
+                    <i class="fas fa-user prefix green-color"></i>
+                    <label data-error="wrong" data-success="right" for="korisnickoime">Korisničko ime</label>
+                    <input id="korisnickoime" type="text" class="form-control validate" onkeypress="validateInput()">
+                </div>
+
+                <div class="md-form mb-4">
+                    <i class="fas fa-lock prefix green-color"></i>
+                    <label data-error="wrong" data-success="right" for="lozinka">Lozinka</label>
+                    <input id="lozinka" type="password" class="form-control validate" onkeypress="validateInput()">
+                </div>
+
+                <p id="checkinput">Molimo, unesite sve podatke.</p>
+            </div>
+
+            <div class="modal-footer d-flex justify-content-center">
+                <button class="btn btn-outline-success" onclick="login()">Login</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="container" style="text-align: center; opacity: .5;">
+    <p>Autobuska stanica | &copy; Marija Pajkić 1272 , 2018.</p>
 </footer>
+
 <script
         src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -92,12 +117,28 @@
             if (pair[1].split(',').length > 0) {
                 const entities = pair[1].split(',');
                 for (let en of entities) {
-                    loadAll(en, false, 'content');
+                    if (checkAuthorization(pair[1])) {
+                        loadAll(en, false, 'content');
+                    } else {
+                        window.location.replace('index.html');
+                    }
                 }
             } else {
-                loadAll(pair[1], false, 'content');
+                if (checkAuthorization(pair[1])) {
+                    loadAll(pair[1], false, 'content');
+                } else {
+                    window.location.replace('index.html');
+                }
             }
         }
+    }
+
+    window.onload = function () {
+        // document.getElementById('checkinput').style.visibility = 'hidden';
+        if (isAuthenticated()) {
+            navigationLinksMakeUp(getAuthorizedEntitiesForRole(localStorage.getItem('zanimanje')));
+        }
+        $('#navmeni').append(isLogged());
     }
 </script>
 </body>
