@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7e44184e-e84c-4dc8-a33b-87d83c1bbfec" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/dodaj-relaciju-sa-medjustajalistima.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rezervacija-karte.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/custom.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dodaj-izmeni.html" beforeDir="false" afterPath="$PROJECT_DIR$/dodaj-izmeni.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grupni-prikaz.html" beforeDir="false" afterPath="$PROJECT_DIR$/grupni-prikaz.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/custom.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pojedinacni-prikaz.html" beforeDir="false" afterPath="$PROJECT_DIR$/pojedinacni-prikaz.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -35,12 +30,23 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rezervacija-karte.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="396">
+              <caret line="223" column="14" lean-forward="true" selection-start-line="223" selection-start-column="14" selection-end-line="223" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/custom.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="124">
-              <caret line="954" column="32" lean-forward="true" selection-start-line="954" selection-start-column="32" selection-end-line="954" selection-end-column="32" />
+            <state relative-caret-position="290">
+              <caret line="803" column="57" lean-forward="true" selection-start-line="803" selection-start-column="57" selection-end-line="803" selection-end-column="57" />
               <folding>
+                <element signature="e#115#121#1" expanded="true" />
+                <element signature="e#324#330#1" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
                 <element signature="e#39#45#0" expanded="true" />
                 <element signature="e#45#51#0" expanded="true" />
@@ -63,8 +69,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dodaj-izmeni.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="73">
-              <caret line="155" column="24" selection-start-line="155" selection-start-column="24" selection-end-line="155" selection-end-column="24" />
+            <state relative-caret-position="107">
+              <caret line="124" column="4" lean-forward="true" selection-start-line="124" selection-start-column="4" selection-end-line="147" selection-end-column="5" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -77,7 +83,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dodaj-relaciju-sa-medjustajalistima.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
+            <state relative-caret-position="3519">
               <caret line="207" column="35" selection-start-line="207" selection-start-column="35" selection-end-line="207" selection-end-column="35" />
             </state>
           </provider>
@@ -129,12 +135,10 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>modal</find>
       <find>loadAll</find>
       <find>select</find>
       <find>load</find>
       <find>save</find>
-      <find>date</find>
       <find>saveobje</find>
       <find>medjustajal</find>
       <find>vremedo</find>
@@ -146,7 +150,6 @@
       <find>loadAllHel</find>
       <find>/stajaliste</find>
       <find>sarelac</find>
-      <find>saveobj</find>
       <find>saveRel</find>
       <find>.text()</find>
       <find>.text()`</find>
@@ -159,6 +162,9 @@
       <find>/medjust</find>
       <find>/relacij</find>
       <find>saveR</find>
+      <find>date</find>
+      <find>saveobj</find>
+      <find>loadAllH</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -175,6 +181,7 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/dodaj-relaciju-sa-medjustajalistima.html" />
         <option value="$PROJECT_DIR$/dodaj-izmeni.html" />
+        <option value="$PROJECT_DIR$/rezervacija-karte.html" />
         <option value="$PROJECT_DIR$/js/custom.js" />
       </list>
     </option>
@@ -190,6 +197,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -211,7 +219,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -248,12 +255,13 @@
       <workItem from="1547401428737" duration="56504000" />
       <workItem from="1547745561985" duration="9468000" />
       <workItem from="1547818075076" duration="18388000" />
-      <workItem from="1547893060943" duration="7389000" />
+      <workItem from="1547893060943" duration="8083000" />
+      <workItem from="1548243041013" duration="5905000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91749000" />
+    <option name="totallyTimeSpent" value="98348000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
@@ -317,6 +325,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/dodaj-relaciju-sa-medjustajalistima.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3519">
+          <caret line="207" column="35" selection-start-line="207" selection-start-column="35" selection-end-line="207" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/config.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4318">
@@ -346,17 +361,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dodaj-relaciju-sa-medjustajalistima.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="207" column="35" selection-start-line="207" selection-start-column="35" selection-end-line="207" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dodaj-izmeni.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="73">
-          <caret line="155" column="24" selection-start-line="155" selection-start-column="24" selection-end-line="155" selection-end-column="24" />
+        <state relative-caret-position="107">
+          <caret line="124" column="4" lean-forward="true" selection-start-line="124" selection-start-column="4" selection-end-line="147" selection-end-column="5" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -365,11 +373,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/rezervacija-karte.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="223" column="14" lean-forward="true" selection-start-line="223" selection-start-column="14" selection-end-line="223" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/custom.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="954" column="32" lean-forward="true" selection-start-line="954" selection-start-column="32" selection-end-line="954" selection-end-column="32" />
+        <state relative-caret-position="290">
+          <caret line="803" column="57" lean-forward="true" selection-start-line="803" selection-start-column="57" selection-end-line="803" selection-end-column="57" />
           <folding>
+            <element signature="e#115#121#1" expanded="true" />
+            <element signature="e#324#330#1" expanded="true" />
             <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
             <element signature="e#39#45#0" expanded="true" />
             <element signature="e#45#51#0" expanded="true" />

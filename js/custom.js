@@ -798,8 +798,13 @@ function dataTableRowData(data, entity) {
                     `;
         }
         ret += `
-            <td>
-                <a class="icon-link btn-outline-id sm" href="pojedinacni-prikaz.html?entitet=` +
+            <td>`;
+        if (entity['urlName'] === 'voznja') {
+            ret += `<a class="icon-link btn-outline-id sm" href="rezervacija-karte.html?voznjaId=` +
+                obj['voznjaId'] + `"><span class="fas fa-clipboard-check"></span></a>&nbsp;
+`;
+        }
+        ret += `<a class="icon-link btn-outline-id sm" href="pojedinacni-prikaz.html?entitet=` +
             entity['urlName'] + `&id=` + obj[entity['attributes'][0]['name']] + `"><span
                         class="fas fa-eye"></span></a>&nbsp;
                 <a class="icon-link btn-outline-id sm" href="dodaj-izmeni.html?akcija=izmeni&entitet=` +
